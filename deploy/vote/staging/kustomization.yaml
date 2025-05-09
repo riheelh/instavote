@@ -4,3 +4,15 @@ resources:
 - ../base
 patches:
 - path: replicas-patch.yaml
+
+replicas:
+  - name: vote
+    count: 4
+
+images:
+  - name: riheel/vote
+    newTag: V1
+
+commonLabels:
+  Project: awesomeProject
+  env: staging
